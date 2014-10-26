@@ -1,0 +1,41 @@
+<div class="container">
+<table class="table table-hover">
+
+   <thead>
+      <tr>
+         <th>ID</th>
+         <th>Info</th>
+         <th>Name</th>
+         
+         <th>Floor</th>
+         <th>Hall Size</th>
+         <th>Bed Size</th>
+         <th>Kitchen size</th>
+         
+         <th>Details</th>
+         <th>Salable Area</th>
+         <th>Status</th>
+         <th>Transaction</th>
+      </tr>
+   </thead>
+   <tbody>
+<% @test_one.each do |project| %>
+<tr>
+<!-- <th><% id = project["id"] %></th> -->
+<th><%= project["id"] %></th>
+<th><%= project["info"] %></th>
+<th><%= link_to project["name"],"#"%></th>
+<th><%= project["floor"]%></th>
+<th><%= project["hall_size"]%></th>
+<th><%= project["bed_size"]%></th>
+<th><%= project["kitchen_size"] %></th>
+<th><%= project["details"] %></th>
+<th><%= project["salable_area"] %></th>
+<th><%= project["status"] %></th>
+<th class="pull-center"><button type="button" class="btn btn-default">Sell</button></th>
+
+</tr>
+<% end -%>
+</tbody>
+</table>
+</div>

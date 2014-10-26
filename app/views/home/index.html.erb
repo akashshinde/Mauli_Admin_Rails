@@ -1,1 +1,24 @@
-<%= @test_one.first %>
+<div class="container">
+<table class="table table-hover">
+   <caption>Hover Table Layout</caption>
+   <thead>
+      <tr>
+      <th>ID</th>>
+         <th>Project Name</th>
+         <th>Project Address</th>
+         <th>No of flats</th>
+      </tr>
+   </thead>
+   <tbody>
+<% @test_one.each do |project| %>
+<tr>
+<% id = project["id"] %>
+<th><%= project["id"]%></th>
+<th><%= link_to project["name"],project_projectDetailsView_path(:id=> id) %></th>
+<th><%= project["address"] %></th>
+<th><%= project["no_of_flats"] %></th>
+</tr>
+<% end -%>
+</tbody>
+</table>
+</div>
